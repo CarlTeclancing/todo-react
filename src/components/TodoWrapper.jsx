@@ -23,6 +23,10 @@ export const TodoWrapper = () => {
       return todo
     }))
   }
+  const deleteTodo = (id) =>{
+    const updatedTodos = todos.filter(todo => todo.id !== id);
+    setTodos(updatedTodos);
+  }
   return (
     <div className="TodoWrapper">
       <h1>Get Things Done!</h1>
